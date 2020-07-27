@@ -1,0 +1,69 @@
+#Takes a Binary value and converts it into a Hexidecimal value.
+x = input("Insert Binary number: ")
+#First_half = x[:4]
+
+R = int(len(x)/4)
+y=0
+z=4
+f = []
+
+def routine(number):
+    if number == '0000':
+        print('0')
+        f.append('0')
+    elif number == '0001':
+        print('1')
+        f.append('1')
+    elif number == '0010':
+        print('2')
+        f.append('2')
+    elif number == '0011':
+        print('3')
+        f.append('3')
+    elif number == '0100':
+        print('4')
+        f.append('4')
+    elif number == '0101':
+        print('5')
+        f.append('5')
+    elif number == '0110':
+        print('6')
+        f.append('6')
+    elif number == '0111':
+        print('7')
+        f.append('7')
+    elif number == '1000':
+        print('8')
+        f.append('8')
+    elif number == '1001':
+        print('9')
+        f.append('9')
+    elif number == '1010':
+        print('A')
+        f.append('A')
+    elif number == '1011':
+        print('B')
+        f.append('B')
+    elif number == '1100':
+        print('C')
+        f.append('`c`')
+    elif number == '1101':
+        print('D')
+        f.append('D')
+    elif number == '1110':
+        print('E')
+        f.append('E')
+    elif number == '1111':
+        print('F')
+        f.append('F')
+    else:
+        print('ERROR: Non Binary values entered. Otherwise check that the number of binary digits is a multiple of 4')
+f = []
+for i in range(0,R):
+#print(x[y:z])
+    routine(x[y:z])
+    i = i + 1
+    y = y + 4
+    z = z + 4
+
+print("Hex:",f)
