@@ -1,0 +1,28 @@
+#Converts a Binary Value to a Decimal
+x = (input("Insert Binary number: "))
+R = int(len(x))
+Total = 0
+p = -1;
+Y = int(x[0])
+print("First Value =",Y)
+
+if Y == 1:
+    Total = -2*pow(2,(R-1))
+
+
+for i in reversed(range(0,R)):
+    l = int(x[i])
+    p = p + 1;
+    print("P:",p)
+
+    if (l == 0 or l == 1):
+        t = l*int(pow(2,p))
+        print("Binary value:",l)
+        print("L:", l)
+        print("T:", t)
+        Total = Total + t
+    else:
+        print("Error, number is not a binary value")
+        break
+
+print('Total:', Total)
